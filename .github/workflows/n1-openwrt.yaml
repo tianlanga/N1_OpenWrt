@@ -100,7 +100,7 @@ jobs:
         OPENWRT_ARMVIRT: openwrt/bin/targets/*/*/*.tar.gz
         PACKAGE_SOC: s905d
         KERNEL_VERSION_NAME: ${{ env.KERNEL_VERSION }}
-        WHOAMI: huangqian8
+        WHOAMI: tianlanga
 
     - name: Organize files
       id: organize
