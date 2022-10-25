@@ -16,7 +16,7 @@ env:
   CONFIG_SH: config.sh
   UPLOAD_FIRMWARE: true
   TZ: Asia/Shanghai
-  KERNEL_VERSION: 6.0.3
+  KERNEL_VERSION: 5.15.74
 
 jobs:
   build_openwrt:
