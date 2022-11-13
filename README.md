@@ -1,7 +1,7 @@
 云编译 N1 OpenWrt 固件
 
 20221113
-add acc
+add  acc
 
 
 20221025
