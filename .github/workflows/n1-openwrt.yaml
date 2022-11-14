@@ -13,7 +13,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   SCRIPT_SH: script.sh
-  CONFIG_SH: config.sh
+  CONFIG_SH: config-tiny.sh
   UPLOAD_FIRMWARE: true
   TZ: Asia/Shanghai
   KERNEL_VERSION: 5.15.74
