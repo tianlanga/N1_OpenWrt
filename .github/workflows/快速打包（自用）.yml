@@ -29,7 +29,7 @@ jobs:
     - name: Package Armvirt as OpenWrt
       uses: unifreq/openwrt_packit@master
       env:
-        WHOAMI: deng
+        WHOAMI: tianlanga
         OPENWRT_ARMVIRT: openwrt-armvirt/*.tar.gz
         PACKAGE_SOC: s905d
        # KERNEL_AUTO_LATEST: false
