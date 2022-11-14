@@ -144,15 +144,15 @@ CONFIG_PACKAGE_luci-app-ramfree=y
 CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng=y
 CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui=y
 CONFIG_PACKAGE_luci-app-turboacc=y
-# CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_BBR_CCA is not set
+CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_BBR_CCA is not set
 CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_PDNSD=y
 CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_SHORTCUT_FE_CM=y
-CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_Go is not set
+# CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_Go is not set
 CONFIG_PACKAGE_luci-app-upnp=y
-CONFIG_PACKAGE_luci-app-vsftpd
+CONFIG_PACKAGE_luci-app-vsftpd=y
 CONFIG_PACKAGE_luci-app-vssr=y
 CONFIG_PACKAGE_luci-app-vssr_INCLUDE_ShadowsocksR_Libev_Server=y
-CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Trojan
+CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Trojan=y
 CONFIG_PACKAGE_luci-app-zerotier=y
 CONFIG_PACKAGE_luci-i18n-amlogic-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-docker-zh-cn=y
@@ -259,10 +259,9 @@ CONFIG_PACKAGE_vsftpd-alt=y
 CONFIG_VSFTPD_USE_UCI_SCRIPTS=y
 
 
-CONFIG_TARGET_KERNEL_PARTSIZE=64
-CONFIG_TARGET_ROOTFS_PARTSIZE=960
+# CONFIG_TARGET_KERNEL_PARTSIZE=64
+# CONFIG_TARGET_ROOTFS_PARTSIZE=960
 CONFIG_TARGET_ROOTFS_TARGZ=y
-CONFIG_TARGET_ROOTFS_EXT4FS=y
 CONFIG_TARGET_ROOTFS_SQUASHFS=y
 
 CONFIG_ALL_NONSHARED=y
