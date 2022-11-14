@@ -11,7 +11,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: .config-tiny
+  CONFIG_FILE: config-tiny.sh
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   TZ: Asia/Shanghai
@@ -142,11 +142,11 @@ jobs:
     - name: 打包内核
       uses: unifreq/openwrt_packit@master
       env:
-        WHOAMI: deng
+        WHOAMI: tianlanga
         OPENWRT_ARMVIRT: openwrt-armvirt/*.tar.gz
         PACKAGE_SOC: s905d
        # KERNEL_AUTO_LATEST: false
-       # KERNEL_REPO_URL: https://github.com/quanjindeng/Actions_OpenWrt-Amlogic/tree/main/kernel
+       # KERNEL_REPO_URL: https://github.com/tianlanga/N1_OpenWrt/tree/main/kernel
         KERNEL_VERSION_NAME: 5.15.32_6.0.2
 
     - name: 发布固件
@@ -155,7 +155,7 @@ jobs:
         tag: openwrt_N1_${{ env.PACKAGED_OUTPUTDATE }}
         artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
         allowUpdates: true
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.ACTIONS_RELEASE }}
         body: |
           自用固件，插件较少！
           如有其他需求，建议下载全插件版本固件！
@@ -163,7 +163,7 @@ jobs:
     - name: 清理Actions空间
       uses: Mattraks/delete-workflow-runs@main
       with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ACTIONS_RELEASE }}
           repository: ${{ github.repository }}
           keep_minimum_runs: 0
           retain_days: 7
@@ -177,4 +177,4 @@ jobs:
         #keep_latest: ${{ github.event.inputs.rele }}
         delete_tags: true
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.ACTIONS_RELEASE }}
