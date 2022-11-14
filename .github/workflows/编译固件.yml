@@ -165,7 +165,7 @@ jobs:
         tag: openwrt_armvirt_v8_${{ env.PACKAGED_OUTPUTDATE }}
         artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
         allowUpdates: true
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.ACTIONS_RELEASE }}
         body: |
           ### **适用于Amlogic平台的N1盒子OpenWrt固件--全插件**
           * **固件信息：**
@@ -186,7 +186,7 @@ jobs:
     - name: 清理Actions空间
       uses: Mattraks/delete-workflow-runs@main
       with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ACTIONS_RELEASE }}
           repository: ${{ github.repository }}
           keep_minimum_runs: 0
           retain_days: 7
@@ -200,4 +200,4 @@ jobs:
         #keep_latest: ${{ github.event.inputs.rele }}
         delete_tags: true
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.ACTIONS_RELEASE }}
