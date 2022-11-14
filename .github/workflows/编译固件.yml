@@ -152,11 +152,11 @@ jobs:
     - name: 打包内核
       uses: unifreq/openwrt_packit@master
       env:
-        WHOAMI: deng
+        WHOAMI: tianlanga
         OPENWRT_ARMVIRT: openwrt-armvirt/*.tar.gz
         PACKAGE_SOC: s905d
        # KERNEL_AUTO_LATEST: false
-       # KERNEL_REPO_URL: https://github.com/quanjindeng/Actions_OpenWrt-Amlogic/tree/main/kernel
+       # KERNEL_REPO_URL: https://github.com/tianlanga/N1_OpenWrt/tree/main/kernel
         KERNEL_VERSION_NAME: 5.15.32_6.0.2
 
     - name: 发布固件
