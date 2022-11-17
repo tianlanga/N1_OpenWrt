@@ -7,8 +7,9 @@ on:
   schedule:
     - cron: 17 15 * * 4
 
-  watch:
-    - types: [started]
+  push:
+    watch:
+      - types: [started]
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
