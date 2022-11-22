@@ -25,7 +25,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@vmain
       with:
         ref: main
 
@@ -51,7 +51,7 @@ jobs:
         useVersionInfo=$(git show -s --date=short --format="date: %cd<br/>commit: %s<br/>commit hash: %H")
         echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
         echo "DATE=$(date "+%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
-        echo "tag_name=$("tianlanga" + date +%Y%m%d)" >> $GITHUB_ENV
+        echo "tag_name=N1_OpenWrt_$(date +%Y%m%d)" >> $GITHUB_ENV
 
     - name: Update feeds
       run: |
