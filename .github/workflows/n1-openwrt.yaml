@@ -2,8 +2,8 @@ name: N1 OpenWrt
 
 on:
   push:
-    branches:
-      - main
+    # branches:
+      # - main
     paths:
       - 'README.md'
   # schedule:
