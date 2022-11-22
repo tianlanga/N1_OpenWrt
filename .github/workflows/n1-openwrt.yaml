@@ -13,7 +13,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   SCRIPT_SH: script.sh
-  CONFIG_SH: config-tiny.sh
+  CONFIG_SH: config.sh
   UPLOAD_FIRMWARE: true
   TZ: Asia/Shanghai
   KERNEL_VERSION: 5.15.74
@@ -51,7 +51,7 @@ jobs:
         useVersionInfo=$(git show -s --date=short --format="date: %cd<br/>commit: %s<br/>commit hash: %H")
         echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
         echo "DATE=$(date "+%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
-        echo "tag_name=$(tianlanga + date +%Y%m%d)" >> $GITHUB_ENV
+        echo "tag_name=$("tianlanga" + date +%Y%m%d)" >> $GITHUB_ENV
 
     - name: Update feeds
       run: |
