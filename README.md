@@ -3,7 +3,6 @@
 所有盒子固件均采用同一底包，默认为打包N1盒子的固件，如需打包其他型号盒子参照flippy的打包脚本说明修改.yml流程文件即可。
 
 
-
 ## 感谢
 - [Lean's OpenWrt 源码仓库](https://github.com/coolsnowwolf/lede)
 - [flippy 内核与打包脚本](https://github.com/unifreq/openwrt_packit)
