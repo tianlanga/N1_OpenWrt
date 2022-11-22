@@ -51,7 +51,7 @@ jobs:
         useVersionInfo=$(git show -s --date=short --format="date: %cd<br/>commit: %s<br/>commit hash: %H")
         echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
         echo "DATE=$(date "+%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
-        echo "tag_name=$(date +%Y%m%d)" >> $GITHUB_ENV
+        echo "tag_name=$(tianlanga + date +%Y%m%d)" >> $GITHUB_ENV
 
     - name: Update feeds
       run: |
@@ -65,6 +65,7 @@ jobs:
       run: |
         cd openwrt
         ./scripts/feeds install -a
+        sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
 
     - name: Load custom configuration
       run: |
