@@ -11,9 +11,6 @@ mv -f package-temp/luci-app-openclash package/lean/
 rm -rf package-temp
 
 # Add luci-theme-opentomcat
-git clone https://github.com/jerrykuku/luci-app-argon-config.git package-temp
-mv -f package-temp/luci-app-argon-config package/lean/
-rm -rf package-temp
 
 # Add luci-app-vssr
 git clone https://github.com/jerrykuku/lua-maxminddb.git package-temp/lua-maxminddb
@@ -23,6 +20,13 @@ cp -r package-temp/small/* package/lean/
 mv -f package-temp/lua-maxminddb package/lean/
 mv -f package-temp/luci-app-vssr package/lean/
 rm -rf package-temp
+
+# Add luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon theme-temp/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-app-argon-config.git theme-temp/luci-app-argon-config
+mv -f theme-temp/luci-theme-argon package/lean/
+mv -f theme-temp/luci-app-argon-config package/lean/
+rm -rf theme-temp
 
 # Change modify config/luci
 sed -i "s/OpenWrt /tianlanga Build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
