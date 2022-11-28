@@ -120,7 +120,7 @@ jobs:
       uses: mingxiaoyu/package-flippy-openwrt@main
       id: package
       with:
-        types: l1pro,s905d,beikeyun,s905x3
+        types: s905d
         out: ${{ env.UPLOAD }}
         sub-name: ${{ env.SUB_VERSION}}
         whoami: mingxiaoyu
@@ -129,7 +129,7 @@ jobs:
     - name: Package OpenWrt with flippy script(+)     
       uses: mingxiaoyu/package-flippy-openwrt@main
       with:
-        types: l1pro,s905d,beikeyun,s905x3
+        types: s905d
         kernel-version: 5.15.74
         out: ${{ env.UPLOAD }}
         sub-name: ${{ env.SUB_VERSION}}
