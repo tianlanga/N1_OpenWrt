@@ -31,9 +31,9 @@ rm -rf package-temp
 sed -i 's/TARGET_rockchip/TARGET_rockchip\|\|TARGET_armvirt/g' package/lean/autocore/Makefile
 sed -i "s/OpenWrt /tianlanga Build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
 sed -i 's/192.168.1.1/192.168.31.254/g' package/base-files/files/bin/config_generate
-sed -i 's#https://github.com/breakings/OpenWrt#https://github.com/tianlanga/N1_OpenWrt#g' package/luci-app-amlogic/luci-app-amlogic/root/etc/config/amlogic
-sed -i 's#ARMv8#openwrt_armvirt#g' package/luci-app-amlogic/luci-app-amlogic/root/etc/config/amlogic
-sed -i 's#opt/kernel#kernel#g' package/luci-app-amlogic/luci-app-amlogic/root/etc/config/amlogic
+sed -i 's#https://github.com/breakings/OpenWrt#https://github.com/tianlanga/N1_OpenWrt#g' package/small-package/luci-app-amlogic/root/etc/config/amlogic
+sed -i 's#ARMv8#openwrt_armvirt#g' package/small-package/luci-app-amlogic/root/etc/config/amlogic
+sed -i 's#opt/kernel#kernel#g' package/small-package/luci-app-amlogic/root/etc/config/amlogic
 # sed -i 's#mount -t cifs#mount.cifs#g' feeds/luci/applications/luci-app-cifs-mount/root/etc/init.d/cifs
 sed -i 's/^\[/#&/g' package/network/config/firewall/files/firewall.user
 echo 'iptables -t nat -I POSTROUTING -o eth0 - MASQUERADE' >> package/network/config/firewall/files/firewall.user
